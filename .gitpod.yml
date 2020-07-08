@@ -1,0 +1,10 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: cd integration-examples/launch-api && npm install
+    command: cd integration-examples/launch-api && npm run example-playwright
+
+ports:
+  - port: 9876
+    onOpen: open-preview
