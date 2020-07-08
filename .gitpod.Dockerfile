@@ -6,11 +6,13 @@ FROM gitpod/workspace-full-vnc
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
-ENV DEBIAN_FRONTEND noninteractive
+# ENV DEBIAN_FRONTEND noninteractive
+
+COPY ./keyboard /etc/default/keyboard
 
 RUN sudo apt-get update
 RUN sudo apt-get install -yq libnss3-dev
-RUN DEBIAN_FRONTEND=noninteractive sudo apt-get install -yq \
+RUN sudo apt-get install -yq \
     libgbm-dev \
     libwoff1 \
     libopus0 \
