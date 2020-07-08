@@ -7,8 +7,9 @@ FROM gitpod/workspace-full-vnc
 # More information: https://www.gitpod.io/docs/config-docker/
 
 RUN sudo apt-get update \
-    && sudo apt-get install -yq libnss3-dev \
-    && sudo apt-get install -yq libgbm-dev \
+RUN sudo apt-get install -yq libnss3-dev
+RUN sudo apt-get install -yq \
+    libgbm-dev \
     libwoff1 \
     libopus0 \
     libwebp6 \
@@ -20,12 +21,12 @@ RUN sudo apt-get update \
     libgdk-pixbuf2.0-0 \
     libegl1 \
     libgles2 \
-    libevent-2.1-6 \
+    # libevent-2.1-6 \
     libnotify4 \
     libxslt1.1 \
     gstreamer1.0-gl \
     gstreamer1.0-plugins-base \
     gstreamer1.0-plugins-good \
     gstreamer1.0-plugins-bad \
-    ffmpeg \
-    && sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/*
+    ffmpeg
+RUN sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/*
