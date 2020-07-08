@@ -10,7 +10,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN sudo apt-get update
 RUN sudo apt-get install -yq libnss3-dev
-RUN sudo apt-get install -yq \
+RUN DEBIAN_FRONTEND=noninteractive sudo apt-get install -yq \
     libgbm-dev \
     libwoff1 \
     libopus0 \
