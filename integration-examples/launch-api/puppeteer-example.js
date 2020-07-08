@@ -1,7 +1,7 @@
 // @ts-check
 const screenplay = require('@testim/screenplay');
 
-screenplay.launch({ testName: __filename, automationLibrary: "puppeteer" }, async function(page) {
+screenplay.launch({ testName: __filename, automationLibrary: "puppeteer", browserOptions: { browserArgs: ['--no-sandbox', '--disable-setuid-sandbox'] } }, async function(page) {
     await page.setViewport({
         width: 1400,
         height: 800,
