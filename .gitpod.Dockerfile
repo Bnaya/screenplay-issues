@@ -6,6 +6,8 @@ FROM gitpod/workspace-full-vnc
 #
 # More information: https://www.gitpod.io/docs/config-docker/
 
+ENV DEBIAN_FRONTEND noninteractive
+
 RUN sudo apt-get update
 RUN sudo apt-get install -yq libnss3-dev
 RUN sudo apt-get install -yq \
