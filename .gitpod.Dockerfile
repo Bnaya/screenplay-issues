@@ -24,7 +24,7 @@ RUN sudo apt-get install -yq \
     libhyphen0 \
     libgdk-pixbuf2.0-0 \
     libegl1 \
-    libgles2 \
+    libgles2
     # libevent-2.1-6 \
     # libnotify4 \
     # libxslt1.1 \
