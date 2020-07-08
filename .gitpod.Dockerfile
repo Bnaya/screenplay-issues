@@ -26,11 +26,11 @@ RUN sudo apt-get install -yq \
     libegl1 \
     libgles2 \
     # libevent-2.1-6 \
-    libnotify4 \
-    libxslt1.1 \
-    gstreamer1.0-gl \
-    gstreamer1.0-plugins-base \
-    gstreamer1.0-plugins-good \
-    gstreamer1.0-plugins-bad \
-    ffmpeg
+    # libnotify4 \
+    # libxslt1.1 \
+    # gstreamer1.0-gl \
+    # gstreamer1.0-plugins-base \
+    # gstreamer1.0-plugins-good \
+    # gstreamer1.0-plugins-bad \
+    # ffmpeg
 RUN sudo apt-get clean && sudo rm -rf /var/lib/apt/lists/* /tmp/*
